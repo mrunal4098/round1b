@@ -1,0 +1,6 @@
+﻿PyMuPDF==1.24.4
+orjson==3.10.3
+# Add scikit-learn later (Step 5/6) to keep image smaller during early iteration
+reportlab==4.0.9
+python-bidi==0.4.2
+arabic-reshaper==3.0.0

@@ -1,0 +1,8 @@
+{
+  "persona": {
+    "role": "Investment Analyst",
+    "expertise": "Technology sector evaluation",
+    "focus_areas": ["Revenue trends", "R&D investment", "Market positioning"]
+  },
+  "job_to_be_done": "Analyze revenue trends, R&D investments, and market positioning strategies."
+}
