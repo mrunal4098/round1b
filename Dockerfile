@@ -6,16 +6,21 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# System deps
+# (Optional) fonts for multilingual PDFs
 RUN apt-get update && apt-get install -y --no-install-recommends fonts-noto-cjk \
     && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /app/input /app/output
-
-COPY assets/fonts /app/fonts
+# Python deps
 COPY requirements.txt .
-RUN pip install --disable-pip-version-check -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app/ ./app
+# Pre-download embedding model so container works offline
+RUN python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')"
+
+# Copy project code
+COPY . /app
+
+# Ensure input/output dirs exist
 RUN mkdir -p /app/input /app/output
-ENTRYPOINT ["python","-m","app.main"]
+
+ENTRYPOINT ["python", "main.py"]
