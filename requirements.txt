@@ -4,3 +4,7 @@ orjson==3.10.3
 reportlab==4.0.9
 python-bidi==0.4.2
 arabic-reshaper==3.0.0
+torch
+sentence-transformers
+networkx
+numpy
