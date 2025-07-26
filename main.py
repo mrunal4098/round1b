@@ -1,53 +1,52 @@
-import json, time, pathlib, datetime
-from sentence_transformers import SentenceTransformer
-from app.pdf_outline import extract_outline_and_sections  # you will create this
-from app.ranking import rank_sections, build_subsection_analysis  # you will create this
+# main.py (top-level)
+import json, time, pathlib, sys, datetime
+from app.extract_outline_and_sections import extract
+from app.ranking import build_query, score_sections
+from app.paragraph_summarize import refine_section
 
-INPUT_DIR = pathlib.Path("/app/input")
+INPUT_DIR  = pathlib.Path("/app/input")
 OUTPUT_DIR = pathlib.Path("/app/output")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-PERSONA_FILE = INPUT_DIR / "persona.json"        # contains persona + job
-OUTPUT_FILE  = OUTPUT_DIR / "challenge1b_output.json"
-
-def load_persona():
-    data = json.load(open(PERSONA_FILE, "r", encoding="utf-8"))
-    return data["persona"], data["job_to_be_done"]
-
 def main():
-    t0 = time.time()
-    persona, job = load_persona()
+    persona_job = json.load(open("persona_job.json","r",encoding="utf-8"))
+    persona = persona_job["persona"]
+    job     = persona_job["job"]
 
-    pdfs = sorted([p for p in INPUT_DIR.iterdir() if p.suffix.lower()==".pdf"])
-    model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu")
-
+    query = build_query(persona, job)
     sections = []
-    for p in pdfs:
-        outline = extract_outline_and_sections(p)
-        sections.extend(outline)  # each item: dict with doc, heading_text, level, page_start, page_end, full_text
+    for i, pdf in enumerate(sorted(INPUT_DIR.glob("*.pdf")), 1):
+        sections.extend(extract(pdf, f"doc{i}"))
 
-    ranked = rank_sections(sections, persona, job, model)
-    subsec = build_subsection_analysis(ranked, persona, job, model)
+    ranked_sections = score_sections(query, sections)
+    # keep top-N, e.g. 15
+    top_sections = ranked_sections[:15]
 
-    out = {
+    subsec_analyses = []
+    for s in top_sections:
+        res = refine_section(s, query)
+        if res:
+            subsec_analyses.append(res)
+
+    output = {
         "metadata": {
-            "input_documents": [p.name for p in pdfs],
-            "persona": persona,
+            "input_documents": [s["doc_name"] for s in sections],
+            "persona" : persona,
             "job_to_be_done": job,
             "processing_timestamp": datetime.datetime.utcnow().isoformat() + "Z"
         },
         "extracted_sections": [
             {
-                "document": r["document"],
-                "page_number": r["page_start"],
-                "section_title": r["heading_text"],
-                "importance_rank": i+1
-            } for i, r in enumerate(ranked)
+              "document": s["doc_name"],
+              "page_number": s["page_start"],
+              "section_title": s["heading"],
+              "importance_rank": s["importance_rank"]
+            } for s in top_sections
         ],
-        "sub_section_analysis": subsec
+        "sub_section_analysis": subsec_analyses
     }
-    json.dump(out, open(OUTPUT_FILE,"w",encoding="utf-8"), ensure_ascii=False, indent=2)
-    print(f"Done in {time.time()-t0:.2f}s")
+    with open(OUTPUT_DIR / "output.json","w",encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
