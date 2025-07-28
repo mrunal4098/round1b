@@ -1,0 +1,358 @@
+{
+  "metadata": {
+    "input_documents": [
+      "file03.pdf"
+    ],
+    "persona": {
+      "role": "Investment Analyst",
+      "expertise": "Technology sector evaluation",
+      "focus_areas": [
+        "Revenue trends",
+        "R&D investment",
+        "Market positioning"
+      ]
+    },
+    "job_to_be_done": "Analyze revenue trends, R&D investments, and market positioning strategies.",
+    "processing_timestamp": "2025-07-28T19:20:22Z"
+  },
+  "extracted_sections": [
+    {
+      "document": "file03.pdf",
+      "page_number": 9,
+      "section_title": "Phase I:  Business Planning",
+      "importance_rank": 1
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 9,
+      "section_title": "Phase II: Implementing and Transitioning",
+      "importance_rank": 2
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 13,
+      "section_title": "9. Financial and Administrative Policies",
+      "importance_rank": 3
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 1,
+      "section_title": "RFP: R RFP: Rquest f r Proposal",
+      "importance_rank": 4
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 9,
+      "section_title": "Phase III: Operating and Growing the ODL",
+      "importance_rank": 5
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 2,
+      "section_title": "Ontario’s Digital Library",
+      "importance_rank": 6
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 6,
+      "section_title": "The Business Plan to be Developed",
+      "importance_rank": 7
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 10,
+      "section_title": "2017 2007 Funding Source",
+      "importance_rank": 8
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 5,
+      "section_title": "For each Ontario student it could mean:",
+      "importance_rank": 9
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 5,
+      "section_title": "Local points of entry:",
+      "importance_rank": 10
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 11,
+      "section_title": "Appendix B: ODL Steering Committee Terms of Reference",
+      "importance_rank": 11
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 5,
+      "section_title": "Guidance and Advice: Training:",
+      "importance_rank": 12
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 8,
+      "section_title": "Evaluation and Awarding of Contract",
+      "importance_rank": 13
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 5,
+      "section_title": "For each Ontario citizen it could mean:",
+      "importance_rank": 14
+    },
+    {
+      "document": "file03.pdf",
+      "page_number": 4,
+      "section_title": "Shared governance structure:",
+      "importance_rank": 15
+    }
+  ],
+  "sub_section_analysis": [
+    {
+      "document": "file03.pdf",
+      "section_title": "Phase I:  Business Planning",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "(university, colleges, public libraries and schools). The proposed funding model requires a continuing government investment, but also recognizes that as the ODL matures a growing share of ODL funding will come from libraries and non-governmental sources. During the 3-year implementation phase (2004 – 2006) libraries will realign their budgets to enable ongoing funding contributions to ODL. During the same period ODL must build the proposed endowment and secure public and private sector gifts and/or in-kind contributions. The following chart outlines the model. This model is based on these assumptions: 1. that ODL expenditures will increase by 50% over a 10 year period 2. that government funding will decrease from 70% to 45% during that 10 year period 3. that library contributions, endowme",
+          "refined_text": "that library contributions, endowment and gifts/in-kind funding will increase from 30% to 55% during the same period OVERVIEW OF ODL FUNDING MODEL The proposed funding model requires a continuing government investment, but also recognizes that as the ODL matures a growing share of ODL funding will come from libraries and non-governmental sources.",
+          "page_number": 9
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "Phase II: Implementing and Transitioning",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "2007 2017 Government $35M (70%) $33.75M (45%) Libraries $10M (20%) $22.5M (30%) Endowment $4.5M (9%) $15M (20%) Gifts/In-Kind $0.5M (1%) $3.75M (5%) TOTAL ANNUAL $50M $75M While the private sector will be invited to participate in the ODL through the endowment, gifts and in- kind contributions, the ODL will also explore compatible commercial services which leverage the reach of the ODL and help to offset operating costs. A $50M budget leverages the consortium buying power of the province’s libraries to secure the best prices for information resources, the widest accessibility and the most favourable contracts. A budget of this nature will ensure a core digital collection of sufficient scope and coverage to address a substantial amount of the wide and diverse information and learning needs ",
+          "refined_text": "2007 2017 Government $35M (70%) $33.75M (45%) Libraries $10M (20%) $22.5M (30%) Endowment $4.5M (9%) $15M (20%) Gifts/In-Kind $0.5M (1%) $3.75M (5%) TOTAL ANNUAL $50M $75M While the private sector will be invited to participate in the ODL through the endowment, gifts and in- kind contributions, the ODL will also explore compatible commercial services which leverage the reach of the ODL and help to offset operating costs. The proposed ODL expenditures in 2006 represent an investment of $5.00 per citizen.",
+          "page_number": 9
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "9. Financial and Administrative Policies",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "a home page for local libraries - to organized, comprehensive, authoritative and validated e-information resources to meet the needs of all Ontario citizens at all stages and in all aspects of their education, life and work. Some examples: 1. Reference Resources - directories: companies, associations, organizations, governments, educational institutions, etc. etc. - almanacs, country information - dictionaries, thesauri, encyclopedias -consumer information - phone books, - travel guides, entertainment guides - weather information - media/newspapers - leisure time, recreational activity guides - indexing and abstracting services - currency converters, - virtual reference services -vocational/career information -internet search engines -current awareness services 2. Subject Guides -arts and ",
+          "refined_text": "- almanacs, country information - dictionaries, thesauri, encyclopedias -consumer information - phone books, - travel guides, entertainment guides - weather information - media/newspapers - leisure time, recreational activity guides - indexing and abstracting services - currency converters, - virtual reference services -vocational/career information -internet search engines -current awareness services 2. Journals, books, maps, music etc.",
+          "page_number": 13
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "RFP: R RFP: Rquest f r Proposal",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "Appendix B: ODL Steering Committee Terms of Reference 1. Preamble Implementation of the Ontario Digital Library (ODL) requires a detailed business plan to be developed and supported by its diverse stakeholder communities (see: www.odl.on.ca).  The business development planning and commitment process will be overseen by a Steering Committee, who are accountable to potential ODL funders including  the Province of Ontario. 2. Terms of Reference In broad terms, the ODL Business Plan Steering Committee is responsible for development of the business plan, securing sector support, and management of the planners and process.  Specific responsibilities include: 2.1 developing a detailed business plan for the three-year implementation phase of the ODL, including governance, management, funding model",
+          "refined_text": "Terms of Reference In broad terms, the ODL Business Plan Steering Committee is responsible for development of the business plan, securing sector support, and management of the planners and process. Specific responsibilities include: 2.1 developing a detailed business plan for the three-year implementation phase of the ODL, including governance, management, funding model and structure, organizational structure, marketing, staffing, and evaluation; 2.2 consulting with and reporting to stakeholder communities, to ensure open, consistent and two-way communication, and to ensure meaningful opportunities for stakeholder input into decision-",
+          "page_number": 10
+        },
+        {
+          "rank": 2,
+          "raw_paragraph": "The purpose of this Request for Proposal (RFP) is to invite firms and/or consultants to present a proposal for developing the business plan for the Ontario Digital Library (ODL). The ODL will deliver high-quality library electronic content to all Ontario residents in order to assist people as they learn, work, and enhance their quality of life. The business plan to be developed is to document and clearly communicate: how the ODL will be implemented, including the timeline the financial plan for the implementation the financial plan for the first 2 operating years, including capital and operating costs, revenues, etc. a financial forecast for the succeeding 2 operating years the services and products to be delivered by the ODL how the ODL will operate and be managed following the implementa",
+          "refined_text": "The purpose of this Request for Proposal (RFP) is to invite firms and/or consultants to present a proposal for developing the business plan for the Ontario Digital Library (ODL). a financial forecast for the succeeding 2 operating years the services and products to be delivered by the ODL how the ODL will operate and be managed following the implementation who will be involved, and what their role/responsibility will be, for both the implementation and operational stages the marketing and communications plan for the ODL This business plan must be completed and approved by the ODL Steering Committee no later than September 30, 2003 Timeline: Those firms/consultants intended to submit a proposal to this RFP must indicate their intention to do so in an e-mail to Michael Ridley (mridley@uoguelph.ca) by April 11th.",
+          "page_number": 1
+        },
+        {
+          "rank": 3,
+          "raw_paragraph": "the marketing and communications plan for the ODL the commitment of all stakeholders to their responsibilities The process of developing this business plan must be extremely consultative to ensure that all stakeholders are engaged in creating a synergistic ODL organization. The proposal must indicate how this consultative process will be approached. The business plan for the ODL must address significant issues. There are, for example, enormous differences in the financial resources available to libraries mandated to provide similar services. Some post-secondary and public libraries, particularly those in large urban areas, have the facilities, funding and technological infrastructure necessary to service their patrons with electronic services and resources.  Many others, particularly in ru",
+          "refined_text": "The proposal should include the following information: a) name of the firm/consultant b) names of those individuals who will be engaged in this project, their specific responsibilities on this project and relevant experience/qualifications c) description of similar engagements that highlight the firm’s experience in business planning and building stakeholder commitment d) references with details of work completed for these references e) description of the approach that will be used for completing the business plan, including a timeline f) cost to complete the study including estimated expenses (i.e.: travel, etc.) and payment structure 7 7 7 7 RFP: To Develop the Ontario Digital Library Business Plan March 2003 3) The business plan must be completed and approved by the ODL Steering Committee no later than September 30, 2003.",
+          "page_number": 6
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "Phase III: Operating and Growing the ODL",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "Appendix B: ODL Steering Committee Terms of Reference 1. Preamble Implementation of the Ontario Digital Library (ODL) requires a detailed business plan to be developed and supported by its diverse stakeholder communities (see: www.odl.on.ca).  The business development planning and commitment process will be overseen by a Steering Committee, who are accountable to potential ODL funders including  the Province of Ontario. 2. Terms of Reference In broad terms, the ODL Business Plan Steering Committee is responsible for development of the business plan, securing sector support, and management of the planners and process.  Specific responsibilities include: 2.1 developing a detailed business plan for the three-year implementation phase of the ODL, including governance, management, funding model",
+          "refined_text": "Terms of Reference In broad terms, the ODL Business Plan Steering Committee is responsible for development of the business plan, securing sector support, and management of the planners and process. Specific responsibilities include: 2.1 developing a detailed business plan for the three-year implementation phase of the ODL, including governance, management, funding model and structure, organizational structure, marketing, staffing, and evaluation; 2.2 consulting with and reporting to stakeholder communities, to ensure open, consistent and two-way communication, and to ensure meaningful opportunities for stakeholder input into decision-",
+          "page_number": 10
+        },
+        {
+          "rank": 2,
+          "raw_paragraph": "10 10 10 10 RFP: To Develop the Ontario Digital Library Business Plan March 2003",
+          "refined_text": "10 10 10 10 RFP: To Develop the Ontario Digital Library Business Plan March 2003",
+          "page_number": 9
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "Ontario’s Digital Library",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "Local points of entry: We will provide the licenses, infrastructure, services and support that enable local libraries to provide exceptional services to their clientele. ODL will focus on support, providing the underpinning, not overshadowing. Services envisioned for the ODL’s include: Access: to the “deep” web (i.e. Commercial, purchased electronic services) to credible web sites and electronic resources to digital government information to local digital collections Guidance and Advice: to support e-learning to support citizens, in real-time, as they try to use electronic resources to assist citizens as they use web-links Training: for library workers for the general public",
+          "refined_text": "Services envisioned for the ODL’s include: Access: to the “deep” web (i.e. Local points of entry: We will provide the licenses, infrastructure, services and support that enable local libraries to provide exceptional services to their clientele.",
+          "page_number": 4
+        },
+        {
+          "rank": 2,
+          "raw_paragraph": "mail (mridley@uoguelph.ca) only by 3:00 p.m. on Friday April 18th. All questions and responses will be shared with those who have indicated that they will be submitting a proposal. Please note, that firms/consultants who have not indicated in an e-mail to Michael Ridley by April 11th that they will be submitting a proposal will not receive any further information or question responses. Background First, some background on the ODL. For the last two years the Ontario Library Association has acted as a catalyst, bringing together the stakeholders needed to create the Ontario Digital Library (ODL). These stakeholders include Ontario’s 5000+ public libraries, university, college, and school libraries, as well as Ontario government ministries. Libraries that serve very different clientele recogn",
+          "refined_text": "The ODL we propose is leading edge for Ontario but several jurisdictions have forged the path with collaborative digital libraries. For the last two years the Ontario Library Association has acted as a catalyst, bringing together the stakeholders needed to create the Ontario Digital Library (ODL).",
+          "page_number": 2
+        },
+        {
+          "rank": 3,
+          "raw_paragraph": "was incorporated in 1997 as a province-wide library consortium. TAL works collaboratively with its members to promote universal access to materials and resources in more than 250 public, post-secondary, special, government and regional libraries. Unlike ODL, TAL does not include elementary or secondary schools. However, the timeline and funding we are proposing for ODL is comparable to TAL‘s experience. TAL’s business planning took several years. TAL’s implementation plan was supported by 8 million dollars in provincially shared funding, spread over three years, later revised to 15 million dollars over 4 years. Not only is Alberta’s population 30% of Ontario’s, TAL does not include elementary or secondary schools as partners; it has 250 member libraries. ODL envisions universal access for ",
+          "refined_text": "The principles which will define and guide the ODL are: Equitable access for all Ontarians: We will bring consistent, high-quality electronic resources and services to 10 million Ontario citizens We will eliminate barriers to the access to information and create more consistent services for library clients. The ODL will be a partnership-based organization providing seamless electronic information services and resources to the citizens of Ontario.",
+          "page_number": 3
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "The Business Plan to be Developed",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "Given the consultative nature of this business planning process, the firm/consultant will also be expected to travel and communicate regularly with various stakeholders as well as with electronic resource publishers/vendors. The proposal should include the following information: a) name of the firm/consultant b) names of those individuals who will be engaged in this project, their specific responsibilities on this project and relevant experience/qualifications c) description of similar engagements that highlight the firm’s experience in business planning and building stakeholder commitment d) references with details of work completed for these references e) description of the approach that will be used for completing the business plan, including a timeline f) cost to complete the study inc",
+          "refined_text": "Given the consultative nature of this business planning process, the firm/consultant will also be expected to travel and communicate regularly with various stakeholders as well as with electronic resource publishers/vendors. The proposal should include the following information: a) name of the firm/consultant b) names of those individuals who will be engaged in this project, their specific responsibilities on this project and relevant experience/qualifications c) description of similar engagements that highlight the firm’s experience in business planning and building stakeholder commitment d) references with details of work completed for these references e) description of the approach that will be used for completing the business plan, including a timeline f) cost to complete the study including estimated expenses (i.e.: travel, etc.) and payment structure 7 7 7 7 RFP: To Develop the Ontario Digital Library Business Plan March 2003",
+          "page_number": 6
+        },
+        {
+          "rank": 2,
+          "raw_paragraph": "Evaluation and Awarding of Contract The contract will be awarded to the bidder whose submission offers the best value; the contract will not necessarily be awarded to the lowest bidder. We reserve the right not to award the contract to any of the bidders responding to this RFP and we may seek further response. Specifically, proposals will be evaluated proposals according to the following criteria: Quality of the proposal /approach outlined for undertaking the business planning process Demonstrated experience Cost, including expenses Timeline and projected completion date Other relevant factors as determined by the ODL Steering Committee Questions regarding this RFP should be directed by e-mail only to Michael Ridley (mridley@uoguelph.ca). Bidders are asked not to contact any other member o",
+          "refined_text": "We reserve the right not to award the contract to any of the bidders responding to this RFP and we may seek further response. Evaluation and Awarding of Contract The contract will be awarded to the bidder whose submission offers the best value; the contract will not necessarily be awarded to the lowest bidder.",
+          "page_number": 7
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "2017 2007 Funding Source",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "3.5 Ontario Library Association representative (ex-officio)  (OLA to appoint one representative) - Role of the OLA ex-officio member: To act as a liaison between the steering committee and the OLA Board, and to assist the chair with the administrative responsibilities connected with the preparation of the business plan, finance, and communications. 3.6 It is anticipated that as planning for the ODL evolves, the Steering Committee may, at its discretion, call on invited experts to advise on issues as required. 4. Appointment Criteria and Process 4.1 Groups and organizations named in Section 3 above are responsible for appointing up to two representatives to the Steering Committee. 4.2 Desired characteristics for steering committee appointees include: Strategic thinkers; • Committed to the c",
+          "refined_text": "4.2 Desired characteristics for steering committee appointees include: Strategic thinkers; • Committed to the concept of multi-sector partnerships; • Knowledgeable about digital libraries and resources; • Knowledgeable about government structures; • Respected by their communities; influential; • Able to take a consultative approach; • • Able to devote time to Steering Committee business: approximately one day per month for meetings plus 2-3 working days per month on related activities. Appointment Criteria and Process 4.1 Groups and organizations named in Section 3 above are responsible for appointing up to two representatives to the Steering Committee.",
+          "page_number": 11
+        },
+        {
+          "rank": 2,
+          "raw_paragraph": "2.3 recruiting and managing the business planner(s); 2.4 defining terms of reference and resource parameters for business planner(s), and authorizing expenditures; 2.5 serving as a focus group for business planner(s) to test ideas; 2.6 providing signoff for business planner(s) at key decision points of business plan development; 2.7 securing commitment from library, government, and institutional stakeholders for implementation of the business plan; 2.8 presenting the business plan to funders 2.9 undertaking advocacy efforts to promote the ODL to the broader communities including library and education communities. 3. Membership Each of the four sectors, Schools, Colleges, Universities, and Public Libraries can appoint up to two representatives to the steering committee 3.1 Schools: - Ontari",
+          "refined_text": "2.3 recruiting and managing the business planner(s); 2.4 defining terms of reference and resource parameters for business planner(s), and authorizing expenditures; 2.5 serving as a focus group for business planner(s) to test ideas; 2.6 providing signoff for business planner(s) at key decision points of business plan development; 2.7 securing commitment from library, government, and institutional stakeholders for implementation of the business plan; 2.8 presenting the business plan to funders 2.9 undertaking advocacy efforts to promote the ODL to the broader communities including library and education communities. Membership Each of the four sectors, Schools, Colleges, Universities, and Public Libraries can appoint up to two representatives to the steering committee 3.1 Schools: - Ontario School Library Association (OSLA) and The Association of Library Consultants and Coordinators of Ontario (TALCO)  (Executive Council of OSLA to name representative in consultation with TALCO) 3.2 Universities: - Ontario Council of University Libraries (OCUL) (OCUL to name) 3.3 Colleges: - Bibliocentre, and Heads of Libraries and Learning Resources (UAG and HLLR to name) 3.4 Public libraries: - Administrators of Medium-sized Public Libraries of Ontario (AMPLO), Administrators of Rural Urban Public Libraries of Ontario (ARUPLO), Administrators of Small Public Libraries of Ontario (ASPLO) and Chief Executives of Large-sized Public Libraries of Ontario (CELPLO) (Executives of AMPLO, ARUPLO, ASPLO and CELPLO to name) 11 11 11 11 RFP: To Develop the Ontario Digital Library Business Plan March 2003",
+          "page_number": 10
+        },
+        {
+          "rank": 3,
+          "raw_paragraph": "8.3 The Steering Committee is accountable to its constituent groups and other stakeholders for ongoing communications and consultation on issues and progress.  The Steering committee is responsible for strong liaison with government particularly the Chief Information Officer Community Services Cluster, ADM’s and Deputy Ministers. 9. Financial and Administrative Policies",
+          "refined_text": "8.3 The Steering Committee is accountable to its constituent groups and other stakeholders for ongoing communications and consultation on issues and progress. The Steering committee is responsible for strong liaison with government particularly the Chief Information Officer Community Services Cluster, ADM’s and Deputy Ministers.",
+          "page_number": 12
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "For each Ontario student it could mean:",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "a financial forecast for the succeeding 2 operating years the services and products to be delivered by the ODL how the ODL will operate and be managed following the implementation who will be involved, and what their role/responsibility will be, for both the implementation and operational stages 6 6 6 6 RFP: To Develop the Ontario Digital Library Business Plan March 2003",
+          "refined_text": "a financial forecast for the succeeding 2 operating years the services and products to be delivered by the ODL how the ODL will operate and be managed following the implementation who will be involved, and what their role/responsibility will be, for both the implementation and operational stages 6 6 6 6 RFP: To Develop the Ontario Digital Library Business Plan March 2003",
+          "page_number": 5
+        },
+        {
+          "rank": 2,
+          "raw_paragraph": "the marketing and communications plan for the ODL the commitment of all stakeholders to their responsibilities",
+          "refined_text": "the marketing and communications plan for the ODL the commitment of all stakeholders to their responsibilities",
+          "page_number": 6
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "Local points of entry:",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "available when they need them and adaptable to different learning styles For each Ontario library it could mean: One point of entry for themselves and their clientele to quality electronic resources and services that support and enhance their collections, programs and services The opportunity to show case their local community, collections, services, and expertise The opportunity to gain from the provincial, collaborative partnership in order to provide a seamless gateway to digital resources and services For the Ontario government it could mean: A point of entry to information services and resources for all Ontario citizens,",
+          "refined_text": "available when they need them and adaptable to different learning styles For each Ontario library it could mean: One point of entry for themselves and their clientele to quality electronic resources and services that support and enhance their collections, programs and services The opportunity to show case their local community, collections, services, and expertise The opportunity to gain from the provincial, collaborative partnership in order to provide a seamless gateway to digital resources and services For the Ontario government it could mean: A point of entry to information services and resources for all Ontario citizens,",
+          "page_number": 5
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "Appendix B: ODL Steering Committee Terms of Reference",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "the preparation of the business plan, finance, and communications. 3.6 It is anticipated that as planning for the ODL evolves, the Steering Committee may, at its discretion, call on invited experts to advise on issues as required. 4. Appointment Criteria and Process 4.1 Groups and organizations named in Section 3 above are responsible for appointing up to two representatives to the Steering Committee. 4.2 Desired characteristics for steering committee appointees include: Strategic thinkers; • Committed to the concept of multi-sector partnerships; • Knowledgeable about digital libraries and resources; • Knowledgeable about government structures; • Respected by their communities; influential; • Able to take a consultative approach; • • Able to devote time to Steering Committee business: appr",
+          "refined_text": "4.2 Desired characteristics for steering committee appointees include: Strategic thinkers; • Committed to the concept of multi-sector partnerships; • Knowledgeable about digital libraries and resources; • Knowledgeable about government structures; • Respected by their communities; influential; • Able to take a consultative approach; • • Able to devote time to Steering Committee business: approximately one day per month for meetings plus 2-3 working days per month on related activities. The chair must be able to devote 5-8 days per month on activities related to the preparation of the business plan, and communications to stakeholders, funders, and government.",
+          "page_number": 11
+        },
+        {
+          "rank": 2,
+          "raw_paragraph": "8.3 The Steering Committee is accountable to its constituent groups and other stakeholders for ongoing communications and consultation on issues and progress.  The Steering committee is responsible for strong liaison with government particularly the Chief Information Officer Community Services Cluster, ADM’s and Deputy Ministers. 9. Financial and Administrative Policies",
+          "refined_text": "8.3 The Steering Committee is accountable to its constituent groups and other stakeholders for ongoing communications and consultation on issues and progress. The Steering committee is responsible for strong liaison with government particularly the Chief Information Officer Community Services Cluster, ADM’s and Deputy Ministers.",
+          "page_number": 12
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "Guidance and Advice: Training:",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "Support of the Ontario E-Learning strategy through a collaborative digital library initiative that positions Ontario on the global e-learning scene Improved access and flexibility for all students at all ages and stages (supports Ontario’s lifelong learning strategy) The opportunity to address emerging job skills shortages and facilitate school to work and job to job transitions with the necessary information and knowledge supports and tools",
+          "refined_text": "Support of the Ontario E-Learning strategy through a collaborative digital library initiative that positions Ontario on the global e-learning scene Improved access and flexibility for all students at all ages and stages (supports Ontario’s lifelong learning strategy) The opportunity to address emerging job skills shortages and facilitate school to work and job to job transitions with the necessary information and knowledge supports and tools",
+          "page_number": 5
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "Evaluation and Awarding of Contract",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "capabilities. The challenge is to secure resources sufficient to both sustain the original investments and to enhance the ODL. The ongoing funding of the ODL will be based on a partnership model involving all the key participants",
+          "refined_text": "The challenge is to secure resources sufficient to both sustain the original investments and to enhance the ODL. The ongoing funding of the ODL will be based on a partnership model involving all the key participants",
+          "page_number": 9
+        },
+        {
+          "rank": 2,
+          "raw_paragraph": "Phase I:  Business Planning Timeline: March 2003 – September 2003 Funding Requested: ~$100,000 jointly funded by stakeholder groups and the provincial government. Result: The ODL business plan The first phase will be to build the ODL business plan. This plan will clearly define the ODL’s services, funding and governance structures, as well as implementation plans for 2003-2005. It will also secure the full commitment of all stakeholders and scope the operational plan for ODL for 2006 and beyond. Given the number and diversity of stakeholders involved, the business planning process must be a fully consultative approach. To ensure that the planning results in a workable plan with the full commitment of all stakeholders it must have competent, dedicated staffing and monies for the travel and ",
+          "refined_text": "This implementation phase will funded by a partnership of government, library stakeholders and other interested parties as a means to quickly jumpstart the ODL. This plan will clearly define the ODL’s services, funding and governance structures, as well as implementation plans for 2003-2005.",
+          "page_number": 8
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "For each Ontario citizen it could mean:",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "that documents and clearly communicates the ODL’s services, funding and governance structures, as well as implementation plans for 2004-2005, and operational plans for 2005- 2007. The planning process must also secure the full commitment of all stakeholders, as represented on the Steering Committee. Specifically, the business plan must include: how the ODL will be implemented, including the timeline the financial plan for the implementation the financial plan for the first 2 operating years, including capital and operating costs,",
+          "refined_text": "that documents and clearly communicates the ODL’s services, funding and governance structures, as well as implementation plans for 2004-2005, and operational plans for 2005- 2007. Specifically, the business plan must include: how the ODL will be implemented, including the timeline the financial plan for the implementation the financial plan for the first 2 operating years, including capital and operating costs,",
+          "page_number": 5
+        }
+      ]
+    },
+    {
+      "document": "file03.pdf",
+      "section_title": "Shared governance structure:",
+      "subsections": [
+        {
+          "rank": 1,
+          "raw_paragraph": "– are using are safe, valid, and bringing them both global and local perspectives; Electronic information and tools that enhance job skills and the learning experience For each Ontario student it could mean: One local point of entry to quality, curriculum- based electronic information resources and services Connection to their individual educational environment, whether at the elementary, secondary or post-secondary levels 5 5 5 5 RFP: To Develop the Ontario Digital Library Business Plan March 2003",
+          "refined_text": "– are using are safe, valid, and bringing them both global and local perspectives; Electronic information and tools that enhance job skills and the learning experience For each Ontario student it could mean: One local point of entry to quality, curriculum- based electronic information resources and services Connection to their individual educational environment, whether at the elementary, secondary or post-secondary levels 5 5 5 5 RFP: To Develop the Ontario Digital Library Business Plan March 2003",
+          "page_number": 4
+        }
+      ]
+    }
+  ]
+}

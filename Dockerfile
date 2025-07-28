@@ -1,4 +1,4 @@
-﻿# ─────────────────────────── Dockerfile  (round-1B) ───────────────────────────
+﻿# ───────────────────────── Dockerfile (round-1B) ─────────────────────────
 FROM python:3.11-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -7,37 +7,36 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# ── OS deps ────────────────────────────────────────────────────────────────
+# OS deps
 RUN apt-get update \
  && apt-get install -y --no-install-recommends fonts-noto-cjk \
  && rm -rf /var/lib/apt/lists/*
 
-# ── create I/O dirs (judge will bind-mount over them) ──────────────────────
+# I/O dirs
 RUN mkdir -p /app/input /app/output
 
-# ── Python deps ────────────────────────────────────────────────────────────
+# Python deps
 COPY requirements.txt .
 
-# 1) install CPU-only Torch FIRST (must use the extra index URL)
+# ① CPU-only Torch
 RUN pip install --no-cache-dir torch==2.2.1+cpu \
     --index-url https://download.pytorch.org/whl/cpu
 
-# 2) install the rest of your requirements
+# ② everything else (now includes rank_bm25)
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 3) pre-download the embedding model so container works offline
-ARG MODEL_NAME=sentence-transformers/all-MiniLM-L6-v2
+# ③ cache MiniLM
 RUN python - <<'PY'
-import os
 from sentence_transformers import SentenceTransformer
-model_name = os.environ.get("MODEL_NAME", "sentence-transformers/all-MiniLM-L6-v2")
-SentenceTransformer(model_name)          # downloads & caches inside image
-print(f"✓ Cached {model_name}")
+SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2", device="cpu")
+print("✓ Cached embedding model")
 PY
 
-# ── copy code & assets ─────────────────────────────────────────────────────
+# code & assets
 COPY assets/fonts /app/fonts
-COPY app/ /app/app
+COPY app/        /app/app
+COPY main.py     /app/main.py
+COPY persona_job.json /app/persona_job.json
 
-ENTRYPOINT ["python", "-m", "app.main"]
+ENTRYPOINT ["python", "main.py"]
 # ───────────────────────────────────────────────────────────────────────────

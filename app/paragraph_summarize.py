@@ -1,53 +1,50 @@
 # app/paragraph_summarize.py
-
 from typing import List, Dict, Any
-import re
-import networkx as nx
+import re, networkx as nx
 from sentence_transformers import util
-from .ranking import _get_model as get_model
+from .ranker import _get_model as get_model
 
-_para_split_re = re.compile(r'\n\s*\n+')  # blank line separator
-_sent_split_re = re.compile(r'(?<=[.!?。！？])\s+')
+_SENT_SPLIT = re.compile(r'(?<=[.!?。！？])\s+')
 
-def _textrank(sentences: List[str], top_n: int = 3) -> str:
+def _textrank(sentences: List[str], top_n: int = 2) -> str:
+    """Simple TextRank over sentence embeddings."""
     if len(sentences) <= top_n:
         return " ".join(sentences)
-    model = get_model()
-    embs = model.encode(sentences, convert_to_tensor=True, normalize_embeddings=True)
-    sim_mat = util.cos_sim(embs, embs).cpu().numpy()
-    graph = nx.from_numpy_array(sim_mat)
-    scores = nx.pagerank(graph)
+    mdl  = get_model()
+    embs = mdl.encode(sentences, convert_to_tensor=True, normalize_embeddings=True)
+    sim  = util.cos_sim(embs, embs).cpu().numpy()
+    scores = nx.pagerank(nx.from_numpy_array(sim))
     ranked = sorted(((scores[i], s) for i, s in enumerate(sentences)), reverse=True)
     return " ".join(s for _, s in ranked[:top_n])
 
-def refine_section(section: Dict[str, Any], query: str, k_paragraphs: int = 3) -> Dict[str, Any]:
-    paras = [
-        p.strip()
-        for p in _para_split_re.split(section["full_text"])
-        if len(p.strip()) > 30
-    ]
-    if not paras:
+def refine_section(section: Dict[str, Any], query: str, k_paragraphs: int = 3) -> Dict[str, Any] | None:
+    """
+    section["paragraphs"] produced by extractor ⇒ [{page:int, text:str}, …]
+    """
+    paras_all = [p for p in section["paragraphs"] if len(p["text"]) > 30]
+    if not paras_all:
         return None
 
-    model = get_model()
-    q_emb = model.encode(query, convert_to_tensor=True, normalize_embeddings=True)
-    p_emb = model.encode(paras, convert_to_tensor=True, normalize_embeddings=True)
+    mdl   = get_model()
+    q_emb = mdl.encode(query, convert_to_tensor=True, normalize_embeddings=True)
+    p_emb = mdl.encode([p["text"] for p in paras_all],
+                       convert_to_tensor=True, normalize_embeddings=True)
     sims = util.cos_sim(q_emb, p_emb)[0].cpu().tolist()
-    scored = sorted(zip(paras, sims), key=lambda t: t[1], reverse=True)[:k_paragraphs]
+    top_idx = sorted(range(len(sims)), key=lambda i: sims[i], reverse=True)[:k_paragraphs]
 
     subsections = []
-    for idx, (para, _) in enumerate(scored, start=1):
-        sentences = _sent_split_re.split(para)
-        refined = _textrank(sentences, top_n=2)
+    for rk, i in enumerate(top_idx, 1):
+        para = paras_all[i]
+        refined = _textrank(_SENT_SPLIT.split(para["text"]))
         subsections.append({
-            "rank": idx,
-            "raw_paragraph": para,
-            "refined_text": refined,
-            "page_number": section["page_start"]
+            "rank"         : rk,
+            "raw_paragraph": para["text"][:800],
+            "refined_text" : refined,
+            "page_number"  : para["page"]      # ← exact PDF page!
         })
 
     return {
-        "document": section["doc_name"],
+        "document"     : section["doc_name"],
         "section_title": section["heading"],
-        "subsections": subsections
+        "subsections"  : subsections
     }
